@@ -6,15 +6,19 @@ class InventoryItem:
 
 class CafeInventory:
     def __init__(self):
-        self.items = {}
+        self.items = []
 
-    def add_item():
-        pass
+    def add_item(self, inventory_item):
+        if isinstance(inventory_item, InventoryItem):
+            self.items.append(inventory_item)
+            print(f"{inventory_item} has been added to the Cafe Inventory")
+        else:
+            print("Error: Only 'InventoryItem' instances can be added to the Inventory")
 
     def change_quanity():
         pass
     
-    def inventory_dif():
+    def inventory_dif(self, quanity_before, quanity_after):
         pass 
 
     def get_low_stock():
