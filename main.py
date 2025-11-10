@@ -22,15 +22,17 @@ def main():
 
     #inventory_difference(apples_week1, apples_week2)
     # Input
-    apple = InventoryItem("apple", 12, 1.50)
+    apple = InventoryItem("Apple", 12, 1.50)
+    carrot = InventoryItem("Carrot", 8, 1.25)
 
     cafe_inventory = CafeInventory()
 
     # Process
-
     cafe_inventory.add_item(apple)
+    cafe_inventory.add_item(carrot)
 
     # Verify
-    print(cafe_inventory.items)
+    for item in cafe_inventory.items:
+        print(f"Cafe Inventory contains: {item}")
 if __name__=="__main__":
     main()

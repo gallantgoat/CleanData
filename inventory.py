@@ -4,6 +4,9 @@ class InventoryItem:
         self.quanity = quanity
         self.unit_cost = unit_cost
 
+    def __str__(self):
+        return self.name
+
 class CafeInventory:
     def __init__(self):
         self.items = []
